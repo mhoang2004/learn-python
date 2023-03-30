@@ -1,0 +1,98 @@
+mkdir => make a folder
+
+notepad a.py => make a FILE named "a"
+code a.py => make a file and code
+
+rm a.py => delete "a.py"
+rm -r -fo folderName => "recursive" delete all sub-folder until total empty;
+"force" prevent warning
+
+python in cmd to code python on cmd, quit() to exit
+
+type(9.2) = class float
+int + float => float 
+
+2**3 = 2^3 = 8
+10 // 3 = 3 //result is a integer
+PEMDAS (parentheses, exponents, division, addition, subtraction)
+
+all, at, one = 1, 2, 3
+
+__no_touchy__ : (double underscore) private variable and leave it alone
+
+(dynamic typing) 
+a = True
+a = "a cat"
+a = None #a special variable that mean 0 (string 0)
+a = 22 / 11
+
+Concatenation string  
+    strOne = "your"
+    strTwo = "Name"
+    strThree = strOne + " " strTwo
+
+    string = "ice"
+    string += " cream"
+
+String format   
+    age = 12
+    print(f"Your age is {age}\n") 
+    print(f"But your real age is {age + 1}")
+
+String and Indexes 
+    string = "yes sir"
+    string[0] = 'y'
+    string[-1] = 'r'
+    string[-2] = 'i'
+
+Get user input 
+    a = input() 
+    everything is string 
+
+round(thing to round, how many decimal point)
+round(a, 2) 
+
+if a and b:
+if tired or bedtime:
+if not isWeekend:
+
+== vs is
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = b
+a == b #True
+a is b #False it compare the memory address
+b is c #True    
+if not x or y mean if (not x) or y
+
+generate a random number
+import random
+randomNum = random.randint(0, 2)
+
+lowercase
+"HELLO".lower() => hello
+
+range(10) start 0; end 10;  
+range(1, 10, 2) //start 1; end 9; step 2
+range(7, 0, -1) //start 7; end 1; step 1
+
+r = range(10)
+list(r) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+for i in range(0, 10)
+while x < 3:
+
+print("\U0001f600") //print a emoji
+
+========LIST==
+like array in c
+
+myList = [1, True, 6.66667, 'a']
+myInt = list(range(0, 9))
+see how many items: len(myList)
+
+myList[-1] ~ myList[4] = 'a'
+1 in myList #True
+
+for item in myList:
+    print`(item)
