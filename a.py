@@ -8,3 +8,5 @@ for color in colors:
 
 my_score = random.randint(0, 6)
 print(my_score)
+
+print("Hello")
