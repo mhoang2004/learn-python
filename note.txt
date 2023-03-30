@@ -93,6 +93,6 @@ see how many items: len(myList)
 
 myList[-1] ~ myList[4] = 'a'
 1 in myList #True
-
+    
 for item in myList:
     print`(item)
