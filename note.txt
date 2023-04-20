@@ -1,6 +1,5 @@
 mkdir => make a folder
 
-notepad a.py => make a FILE named "a"
 code a.py => make a file and code
 
 rm a.py => delete "a.py"
@@ -13,7 +12,7 @@ type(9.2) = class float
 int + float => float 
 
 2**3 = 2^3 = 8
-10 // 3 = 3 //result is a integer
+10 // 3 = 3 #result is a integer
 PEMDAS (parentheses, exponents, division, addition, subtraction)
 
 all, at, one = 1, 2, 3
@@ -71,6 +70,8 @@ randomNum = random.randint(0, 2)
 
 lowercase
 "HELLO".lower() => hello
+uppercase
+"hello".upper() => HELLO
 
 range(10) start 0; end 10;  
 range(1, 10, 2) //start 1; end 9; step 2
@@ -95,4 +96,328 @@ myList[-1] ~ myList[4] = 'a'
 1 in myList #True
     
 for item in myList:
-    print`(item)
+    print(item)
+
+i = 0
+while i < len(colors):
+    print(colors[i])
+    i += 1
+
+#ADD SOMETHING TO LIST
+myList.append("Hello") #add an element to list (only one)
+
+myInt.extend([10, 11, 12, 13]) #add multiple element to list
+
+myList.insert(2, "Hello") #[1, True, "Hello", 6.66667, 'a']
+
+# -1 is not the last position (it will take the list which is not added yet)
+myList.insert(-1, "Hello") #[1, True, 6.66667, "Hello", 'a'] 4th position
+
+myList.insert(len(myList), "LAST") 
+
+#REMOVE SOMETHING FROM LIST
+myList.clear() #[] it clear everything
+
+myList.pop(1) #remove by index (1) [1, 6.66667, 'a']
+
+myList.remove('a') #remove by value ('a') [1, True, 6.66667]
++ if it have two 'a', remove the first one
++ if it have no 'a', it return error
+
+List method:
+    + index: return the index of element
+    VD: myList.index('a') # 4
+    VD: myList.index('a', 1) # begin find from index 1
+    VD: myList.index('a', 2, 4) # in range of [2; 4)
+    if have two more it will take the first one
+
+    + count: return the number of times x appears in the list
+    VD: myList.count('a') # 1
+
+    + reverse: reverse the element of the list  
+    VD: myList.reverse() # [False, 4.5555, 'a', 1]
+
+    + sort: sort the item of the list
+
+    + join: technically a String method that takes an iterable argument
+    VD: names = ["Le", "Adam", "Hannah"]
+    output =  " ,".join(names) # Le, Adam, Hannah
+
+    + SLICE
+    some_list[start:end:step]
+    VD: first_list = [1, 2, 3, 4, 5]
+        first_list[1:] = [2, 3, 4, 5]
+        first_list[3:] = [4, 5]
+        negative number: it will start slice that many back from the end
+        first_list[-1:] = [5]
+    
+        new-list = first_list[-3:] = [3, 4, 5] #it will create a new list
+        
+        first_list[:2] = [1, 2] #no take the 2nd element
+        first_list[1: 3] = [2, 3]  
+        negative number: how many items exclusive from the end
+        first_list[:-1] = [1, 2, 3, 4]
+
+        first_list[1::2] = [2, 4]
+        first_list[::2] = [1, 3, 5]
+        negative number: reverse from the end
+        first_list[1::-1] = [1, 2]
+
+        *trick with slice:
+        string = "This is fun"
+        string[::-1] #reverse the string
+
+        numbers = [1, 2, 3, 4, 5]
+        numbers[1:3] = ['a', 'b', 'c'] #[1, 'a', 'b', 'c', 4, 5]
+    
+    + swap
+    VD: names = ["Adam", "Smith"]
+    names[0], names[1] = names[1], names[0] #["Smith", "Adam"]
+
+    + list comprehension
+        [10*x for x in range(1, 5)] #[10, 20, 30, 40]
+        [bool(item) for item in ['', [], 0]] #False, False, False 
+        [string(number) for number in numbers] #['1', '2', '3', '4', '5']
+
+        evens = [num for num in numbers if num % 2 == 0]
+        [num*2 if num % 2 == 0 else num/2 for num in numbers]
+        with_vowels = "This is so much fun!"
+        ' '.join([char for char in with_vowels if char not in "ueoai"]) #"Ths s s mch fn"
+
+========DICTIONARY==
+cats = {"name": "blue", "age": 4, "isCute": True}
+dogs = dict(name = "red") #{'key': 'value'}
+dogs["age"] #4
+
+Iterating dictionary:
+for x in dogs.values(): every value
+for y in cats.keys(): every key
+for x, y in mouses.items(): every item and key
+
+Does a dictionary have a key?
+"name" in cats #True
+"awesome" in dogs #False
+
+Does a dictionary have a key?
+"blue" in cats.values() #True
+
+Dictionary method:
+    + clear: clear all the keys and values
+        dogs.clear()
+    + copy: make a copy of dictionary
+        puppy = dogs.copy()
+        puppy == dogs #True
+        puppy is dogs #False
+    + fromkeys: creates key-value pairs from comma separated values
+        new-user = {}.fromkeys(['name', 'age', 'email'], 'unknown') 
+        # {'name': 'unknown', 'age': 'unknown', 'email': 'unknown'}
+
+        {}.fromkeys('new', '0') # {'n': 0,'e': 0, 'w': 0}
+    + get: retrieves a key in an object and return None instead of KeyError if the key does not exist
+        d = dict(a = 1, b = 2, c = 3)
+        d.get('a') #1
+        d.get('b') #2
+        d.get('awesome') #None  
+
+    + pop: takes a single argument (a key) and removes that key-value and return the key that was removed
+        d.pop('a') # {'b': 2, 'c': 3}
+
+    + popitem: takes no argument, remove randomly a pairs of key-value
+    + update: update keys and values in dictionary with another set of key value pairs
+        e = {d = 4}
+        e.update(d) # {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+Dictionary comprehension:
+    numbers = dict(first = 1, second = 2, third = 3)
+    squared_numbers = {key: value ** 2 for key, value in numbers.items()}
+    print(squared_numbers) #{'first': 1, 'second': 4, 'third': 9}
+
+================Tuples and Sets==========
+Tuples: it is a const lists (can not change)
++ faster than list?
++ makes code safer
+
+alphabet = ('a', 'b', 'c', 'd', 'e')
+alphabet[1] #'b'
+
++ can use Tuples as a keys in dictionary:
+location = {
+    (21, 11): "Ha Noi office", #(x, y) on map
+    (45, 22): "Sai Gon office" 
+}
+
++ some will return Tuples like .items() in dictionary:
+a = {'a': 1, 'b': 2, 'c': 3}
+a.items() #dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+Tuples method totally the same lists (count(value), index(value ), slice, nested Tuples)
+
+Sets: 
++ set have no duplicate value
++ there is no order (can't access by index)
+
+number = {1, 2, 3, 4}
+remove duplicate element:
+set(lists)
+
+Sets method
+    + add: if add the things have already exist it won't add
+    a.add('hello')
+
+    + remove/discard: remove one item in Sets
+    if item doesn't exist in Sets remove will throw an error but discard is not
+    a.remove('Ha Noi')
+
+    + copy: creates a copy of Sets
+
+    + clear: remove entire contents of the Sets
+
+    + set math:
+    a = {1, 2, 3, 4}
+    b = {3, 4, 5, 6}
+    a | b = {1, 2, 3, 4, 5, 6}
+    a & b = {3, 4}
+
+    + sets comprehension: {x*x for x in range(0,10)}
+
+============FUNCTION=============
+def name_of_function ():
+    #block code
+
+def add(a,b):
+    return a + b
+
+difference between parameters vs argument
+    + parameters is variables we pass when define
+    + argument is variables we pass when call
+
+default parameters
+def exponent(num, power = 2): #default of power is 2
+    return num ** power
+
+keyword argument
+def full_name(first_name, last_name):
+    return first_name + last_name
+
+full_name(first_name = "Harry", last_name = "Le") #Harry Le
+full_name(last_name = "Henry", first_name = "Le") #Henry Le
+
+scope
+global a
+nonlocal b #some variables in scope somewhere
+
+def say_hello():
+     """HHHH"""
+    return "hello"
+say_hello.__doc__ #"HHH"    
+
+*args 
+    + a special operator we can pass to function 
+    + it gather remaining argument as a tuple 
+    + it just a parameter, call it when you need 
+
+    def sum_all(*args): 
+    sum = 0
+    for val in args:
+        sum += val
+    return sum
+
+    sum_all(9, 2, 5, 8) #args = (9, 2, 5, 8)
+
+**kwargs #keyword argument
+    + it gather remaining argument as a dictionary
+
+    def fav_colors(**kwargs):
+    for people, color in kwargs.items():
+        print(f"{people.capitalize()}'s favorite is {color}")
+
+    fav_colors(colt="purple", ruby="red", dan="blue") #{'colt': 'purple', 'ruby': 'red', 'dan': 'blue'}
+
+order parameter
+    1. parameters
+    2. *args
+    3. default parameters
+    4. **kwargs
+
+tuple, set unpacking:
+    nums = [1, 2, 3] => *nums = 1, 2, 3
+
+dict unpacking
+    def add_and_multiply_numbers(a, b, c, **kwargs):
+        print(a + b * c)
+        print(kwargs)
+
+    data = dict(a=1, b=2, c=3, d=4)
+    **data => a = 1, b = 2, c = 3
+
+    add_and_multiply_numbers(**data) #7 {d: 4}
+
+=================Lambdas=======================
+square = lambda num: num * num
+add = lambda a, b: a + b
+
+a function have no name
+create when you just need it once time
+
+==========Built-in Function=======
+* Map and Filter
+
+nums = [1, 2, 3, 4]
+
+map takes two argument map(function, iterable)
+triple = map(lambda x: x*3, nums)
+list(triple) #[3, 6, 9, 12]
+
+filter takes two argument map(function, iterable) func must return True or False
+even = filter(lambda x: x % 2 == 0, nums)
+list(even) #[2, 4s]
+
+* Any and all
+all(iterable) return True if all is truthy
+all([0, 1, 2, 4]) #False
+all([num for num in [2, 6, 4, 8] if num % 2 == 0]) #True
+
+any(iterable) return True if at least one element is truthy
+any([0, 1, 2 , 3]) #True
+any([num for num in [1, 2, 3] if num > 5]) #False   
+
+list comprehension: [x for x in range(100)] 
+generator expression: (y for y in range(100))
+if you just wanna generate one time and never use again => generator expression it save space
+
+* Sorted
+sorted(iterable, key, reverse) it return a copy has been sorted
+default is small -> big, alphabet
+sorted(num) #[1, 2, 3, 4]
+
+sorted(users, key = lambda user, user['name']) #sort by alphabet
+sorted(user, key = len, reverse=True) big -> small
+
+* Reversed
+reversed([1, 2, 3, 4]) #[4, 3, 2, 1]
+
+* Len 
+'hello'.__len__() #5
+len('hello') #5     
+
+* abs(), sum(), round()
+
+* zip()
+nums1 = [1, 2, 3]
+nums2 = [4, 5, 6]
+names = ["Thomas", "Leo", "Jack"]
+
+print(final_grade)
+zip(nums1, nums2) #[(1,4), (2,5), (3,6)]
+
+five_by_two = [(0, 1), (1, 2), (2, 3), (3, 4), (4,5)]
+list(zip(*five_by_two)) #[(0, 1, 2, 3, 4), (1, 2, 3, 4, 5)]
+
+final_grade = {pair[0]: max(pair[1], pair[2]) for pair in zip(names, nums1, nums2)}
+
+============debug and error handling===========
++ syntaxError
++ nameError: not define something
++ typeError
++ indexError
++ valueError
