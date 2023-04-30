@@ -34,6 +34,10 @@
 # for i in even:
 #     print(i)
 
+# import pdb
+# pdb.set_trace()
+
+
 # nums1 = [1, 5, 3]
 # nums2 = [4, 2, 6]
 # names = ["Thomas", "Leo", "Jack"]
@@ -50,9 +54,35 @@
 
 # print(avg_grade)
 
-def interleave(string1, string2):
-    res = ""
-    []
+# def interleave(string1, string2):
+#     res = ""
+#     []
+
+# print(interleave('aaa', 'zzz'))
+# from random import randint
+# print(random.choice(["apple", "banana", "cheery", "durian"]))
+# print(random.shuffle(["apple", "banana", "cherry", "durian"]))
+# print(randint(1, 100))
+
+# import module1
+# from random import *
 
 
-print(interleave('aaa', 'zzz'))
+# print(choice([1, 2, 3]))
+# module1.another_fn()
+
+# from termcolor2 import colored
+
+# print(colored("hello", "red"))
+# help(termcolor2)
+
+
+import pyfiglet
+from termcolor2 import colored
+available_colors = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white",
+                    "light_grey", "dark_grey", "light_red", "light_green", "light_yellow", "light_blue"]
+msg = input("What would you like to print: ")
+user_color = input("What color: ")
+if user_color not in available_colors:
+    user_color = "yellow"
+print(colored(pyfiglet.figlet_format(msg), user_color))

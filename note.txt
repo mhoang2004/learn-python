@@ -416,8 +416,141 @@ list(zip(*five_by_two)) #[(0, 1, 2, 3, 4), (1, 2, 3, 4, 5)]
 final_grade = {pair[0]: max(pair[1], pair[2]) for pair in zip(names, nums1, nums2)}
 
 ============debug and error handling===========
-+ syntaxError
-+ nameError: not define something
-+ typeError
-+ indexError
-+ valueError
+raise ValueError('invalid value')
+raise NameError('invalid value')
+
+try: 
+    foo 
+except:
+    print("an error!")
+
+def get(d, key):
+    try:
+        return d[key]
+    except KeyError:
+        return None
+
+try:
+    num = int(input("Enter a number"))
+except:
+    print("That's not a number)
+else:
+    print("Sucessfully")
+finally:
+    print("RUN NO MATTER WHAT")
+
+except (TypeError, ZeroDivisionError) as err:
+    print(err) #it will print err message
+
+import pdb #python debugger
+pdb.set_strace() #stop somewhere
+
+# l (list) #show current line stopped
+# n (next line) #next line to stopped
+# p (print) #p l (print value of l not list all code)
+# c (continue) #execute all code
+
+=========Modules========
+* Built-in modules
+
+    + import random
+    random.randint(0, 100)
+
+    + we can give an alias, use: "as"
+    import random  as omg_random 
+    omg_random.choice([1, 2, 3])
+
+    + "from" keyword lets you import parts of a module
+    only import what you need
+    if you wanna import everything, use:  from MODULE import *
+
+    + from random import randin, choice
+    from random import shuffle as magic_number_chooser
+
+    + import my own code
+    import module1
+    module1.fn()
+
+    from module1 import fn
+    fn()
+
+    from module1 import another_fn as fn2
+    fn2()
+
+    + external modules
+    
+    -> is a built-in function
+    -> are download from  the internet
+    -> use "pip" to download and use them
+    
+    + magic of __name__
+    -> when run, every Python file has a __name__ variable
+    -> if the file is the main file being run, its value is "__main__", otherwise, its value is the file name
+    -> when use import it will go into that file and execute it
+
+    * so prevent it being call outside the main file:
+        if __name__ == "__main__":
+            say_sup()
+    
+======Making HTTP request=======
+//how the internet work?
+//request/ response is?
+//IP address
+
+HTTP: hypertext transfer protocol
+Internet is just a bunch of computer that are connected that can talk to one another
+
+google.com not a real thing
+computer needs to send a request to a particular IP, so it just concerned about IP
+
+DNS Lookup: like a phone book for the internet
+google.com =====> DNS server ====> 12.172.3.142
+
+IP address is unique
+                     
+_______________________________      ===== 172.123.9.142 (GET /) ===>         __________
+| Clients (e.g. your computer) |                                              | Server |
+|_____________________________ |     <========= 200 OK ==============         |________|
+
+
+Response status codes:
+    + 2xx - Success
+    + 3xx - Redirect
+    + 4xx - Client error
+    + 5xx - Server error
+
+go to a URL, hit enter:
+    1. DNS Lookup (url turn to IP by using DNS Lookup)
+    2. computer makes a request to a server             `\
+    3. server process the request                         |> request/response cycle                        
+    4. server issues a response (Success or Error)      ,/
+
+HTTP headers
+    + sent with both requests and responses
+    + provide additional information about the request or response
+
+HTTP verbs
+    * GET                                   |   *POST
+    - Using for retrieving data             |   - Useful for writing data
+    - Data passed in query string           |   - Data passed in request body
+    - Should have no "side-effects"         |   - Can have "side-effects" #change the backend
+    - Can be cached                         |   - Not cached
+    - Can be bookmarked                     |   - Can't be bookmarked
+
+APIs: application programming interface
++ API just allow us to write code that can get data/how to use data from another application without having to understand
+how the application work
++ We just want the information, please send it back in a format that we care about, there are 2 format:
+    * JSON: Javascript object notation
+    * XMS
++ API is data but we not wanna HTML files we can specifies it to JSON
+
+#402 is payment requirement
+
+
+https://www.google.com/search?
+q=ice+cream& #query
+oq=ice+cream& #original query
+aqs=chrome.0.0i271j46i433i512j0i512j46i512j0i512l2j46i340i512l2j0i512j46i512.3065j0j1&
+sourceid=chrome&
+ie=UTF-8
