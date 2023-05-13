@@ -1,5 +1,9 @@
 import requests
 import random
+import pyfiglet
+
+header = pyfiglet.figlet_format("DAD JOKE 3000!")
+print(header)
 
 user_input = input("Let me tell you a joke! Give me a topic: ")
 

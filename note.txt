@@ -184,7 +184,7 @@ List method:
         with_vowels = "This is so much fun!"
         ' '.join([char for char in with_vowels if char not in "ueoai"]) #"Ths s s mch fn"
 
-========DICTIONARY==
+========DICTIONARY=======
 cats = {"name": "blue", "age": 4, "isCute": True}
 dogs = dict(name = "red") #{'key': 'value'}
 dogs["age"] #4
@@ -370,7 +370,7 @@ list(triple) #[3, 6, 9, 12]
 
 filter takes two argument map(function, iterable) func must return True or False
 even = filter(lambda x: x % 2 == 0, nums)
-list(even) #[2, 4s]
+list(even) #[2, 4]
 
 * Any and all
 all(iterable) return True if all is truthy
@@ -435,7 +435,7 @@ try:
 except:
     print("That's not a number)
 else:
-    print("Sucessfully")
+    print("Successfully")
 finally:
     print("RUN NO MATTER WHAT")
 
@@ -494,8 +494,6 @@ pdb.set_strace() #stop somewhere
     
 ======Making HTTP request=======
 //how the internet work?
-//request/ response is?
-//IP address
 
 HTTP: hypertext transfer protocol
 Internet is just a bunch of computer that are connected that can talk to one another
@@ -547,10 +545,11 @@ how the application work
 
 #402 is payment requirement
 
-
 https://www.google.com/search?
 q=ice+cream& #query
 oq=ice+cream& #original query
 aqs=chrome.0.0i271j46i433i512j0i512j46i512j0i512l2j46i340i512l2j0i512j46i512.3065j0j1&
 sourceid=chrome&
 ie=UTF-8
+
+Iterator, Generator, Decorator
