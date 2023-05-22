@@ -553,3 +553,88 @@ sourceid=chrome&
 ie=UTF-8
 
 Iterator, Generator, Decorator
+
+#Iterator
+    Iterator will return one data/element when next() is called on it
+
+#Iterable
+    is an object will return an iterator when iter() is called on it
+
+#Generator
+    generator is iterators 
+    generator is function return generator by the  keyword `yield`
+    -> also return a iterators
+
+    *Generator expression:
+    n = (i for i in range(1000000))
+    sum(n) #it will faster than sum([i for i in range(1000000)])
+
+#Decorator
+    Decorator are functions
+    Decorator wrap other functions and enhance their behavior
+
+    Example:
+    def shout(fn):
+        def wrapper(*args, *kwargs):
+            return fn(*args, *kwargs).upper()
+        return wrapper
+    
+    @shout
+    def greet(name):
+        return f"hi, i'm {name}"
+    
+    @shout
+    def order(main, side): #if three argument
+        return f"hi, i'd would like the {main} and the {side}"
+
+====TESTING WITH PYTHON======
+- test like eat vegetables
+
+test driven development (TDD)
+    + development begins by writing tests
+    + once tests are written, write code to make tests pass
+    + once tests pass, a feature is considered complete
+
+red - test fail
+green - write the minimal amount of code necessary to make the test pass
+refactor - clean up the code, but it still work
+
+- Assertions
+    + assert was a statement
+    + it really do: if not some_expression: raise AssertionsError()
+
+    Example:
+    def add(x, y):
+    assert x > 0 and y > 0, "Both numbers must be positive"
+    return x + y
+
+    print(add(9, 2)) #11
+    print(add(0, 1)) #AssertionsError()
+
+    + python -O a.py #it will ignore all the Assertions
+
+    another Example:
+    def do_something(user):
+        assert user.is_admin, "Only admin can do this"
+        #do things...
+
+- doctest
+def double(values):
+    """ double values in a list
+
+    >>> double([1, 2, 3, 4])
+    [2, 4, 6, 8]
+
+    >>> double([])
+    []
+    """
+    return [2 * value for value in values]
+
+- Unit test:
+    + REMEMBER ABOUT TEST FIRST, THEN WRITE CODE 
+    + test smallest parts of an application in isolation (classes, func, module,...)
+    
+    -------------
+    python
+
+

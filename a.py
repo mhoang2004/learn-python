@@ -77,12 +77,39 @@
 # help(termcolor2)
 
 
-import pyfiglet
-from termcolor2 import colored
-available_colors = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white",
-                    "light_grey", "dark_grey", "light_red", "light_green", "light_yellow", "light_blue"]
-msg = input("What would you like to print: ")
-user_color = input("What color: ")
-if user_color not in available_colors:
-    user_color = "yellow"
-print(colored(pyfiglet.figlet_format(msg), user_color))
+# import pyfiglet
+# from termcolor2 import colored
+# available_colors = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white",
+#                     "light_grey", "dark_grey", "light_red", "light_green", "light_yellow", "light_blue"]
+# msg = input("What would you like to print: ")
+# user_color = input("What color: ")
+# if user_color not in available_colors:
+#     user_color = "yellow"
+# print(colored(pyfiglet.figlet_format(msg), user_color))
+
+# def add(x, y):
+#     assert x > 0 and y > 0, "Both numbers must be positive"
+#     return x + y
+
+
+# print(add(9, 2))
+# print(add(0, 1))
+
+def double(values):
+    """ double values in a list
+
+    >>> double([1, 2, 3, 4])
+    [2, 4, 6, 8]
+
+    >>> double([])
+    []
+
+    >>> double(['a', 'b', 'c', 'd'])
+    ['aa', 'bb', 'cc', 'dd']
+
+    >>> double([True, None])
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+    """
+    return [2 * value for value in values]
