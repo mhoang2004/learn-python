@@ -635,6 +635,27 @@ def double(values):
     + test smallest parts of an application in isolation (classes, func, module,...)
     
     -------------
-    python
+    python comes with a built-in function module called `unittest`
+    we can write unit tests encapsulated as classes that inherit from unittest.TestCase (*)
+    this inheritance gives we access to many assertion helpers that let you test the behavior of your functions
+
+    (*) TestCase is a class provides several assert methods to check for and report failures, the most commomly is:
+        assertEqual(a, b); assertFalse(x), asssertIsNone(x); assertIn(x,y); assertIsInstance(a, b) (issinstance(a, b)), ...
+
+
+    testing for error 
+    ' self.assertRaises(IndexError) '    #star with `with` statement
+    (open file unittest for more information..) 
+
+    #how to check if `is_healthy` was a boolean
+    if not isinstance(is_healthy, bool):
+    raise ValueError("is_healthy must be a boolean")
+    //i think i will buy a speaker
+    //tinh nang diem danh cho giao vien: moi lan bam enter la se ra ten 1 thang hoc sinh
+
+    
+
+
+    
 
 
