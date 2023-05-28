@@ -656,10 +656,25 @@ def double(values):
 
         + code need to run before tests: setUp
             * common use cases: adding/ removing data from a test database, creating instances of class
+<<<<<<< HEAD
 
         + code need to run after tests: tearDown
         
  
+=======
+            
+        + code need to run after tests: tearDown
+        
+==========FILE MANIPULATION==
+    * Reading files
+
+    + read a file with the `open` function
+    + `open` return a file object
+    + read file object with `read` method
+
+    + python reads file by using a cursor
+    + after the file is read, the cursor is at the end
+>>>>>>> ae8ee73dafcbe09446e3cce636a19a1025f2ef63
     
 
 
