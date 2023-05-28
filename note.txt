@@ -656,12 +656,6 @@ def double(values):
 
         + code need to run before tests: setUp
             * common use cases: adding/ removing data from a test database, creating instances of class
-<<<<<<< HEAD
-
-        + code need to run after tests: tearDown
-        
- 
-=======
             
         + code need to run after tests: tearDown
         
@@ -674,8 +668,49 @@ def double(values):
 
     + python reads file by using a cursor
     + after the file is read, the cursor is at the end
->>>>>>> ae8ee73dafcbe09446e3cce636a19a1025f2ef63
+
+    + to move python cursor, using `seek`
+        - f.seek(0) #move to beginning of file
+        - f.seek(1) #move to the first index of character    
+
+    + if you just wanna read one line `readline`
+        - f.readline()
     
+    + if you wanna all the lines in file use `readlines`
+        - f.readlines() #['first line', 'second line', 'third line']
+    
+    + check if the file close or not: f.closed()
+    + close file: f.close()
+
+    * `with` statement
+    with open('story.txt') as f: #it open the file and close automatically
+        data = f.read() 
+
+    * write data into file
+    #create file, overwritten file
+    with open('story.txt', 'w') as file:
+        file.write("Writing files is great\n")
+        file.write("Here's another line of text\n")
+        file.write("Closing now, goodbye!\n")
+
+    * modes for working with file
+        'r' - read file (default)
+        'w' - write to file (old data will be creased)
+        'a' - append new text to file
+        with open('story.txt', 'a') as file:
+            seek(0) #up to head to append
+            file.write("Writing files is great\n")
+        'r+' - read and write to a file (writing based on cursor and only work on existing file)
+
+
+ 
+
+
+
+
+
+    
+
 
 
     

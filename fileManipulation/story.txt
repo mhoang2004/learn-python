@@ -1,1 +1,3 @@
-This short story is really short. ....
+Writing files is great
+Here's another line of text
+Closing now, goodbye!

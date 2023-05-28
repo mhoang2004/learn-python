@@ -1,0 +1,2 @@
+kakakakaWriting something into file is funny
+Here is another line of text
