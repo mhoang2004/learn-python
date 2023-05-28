@@ -24,8 +24,6 @@ ngày mai làm gì giờ ta
     cày: tiếp tích phân 2 lớp, chắc ôn hết tích phân 2 lớp là mệt lun rùi
     còn tham lam hơn nữa chắc chờ tiếp: xong tích phân 2 lớp rồi sẽ công đánh chương 4
 
-    xác xuất thống kê: chắc làm cho đủ 5 bài ngày hôm này (dứt điểm nợ nần)
-    bây h là 23/5 rùi, toang tới nơi rồi?
     khi nào luyện đề 2 môn xác xuất và giải tích 2?
     giải tích còn nhiều thời  gian chứ xác xuất sắp hết time rồi
     mai bớt chơi bời lại lo học
@@ -37,27 +35,21 @@ ngày mai làm gì giờ ta
     chắc mình tạm dừng học python với web lại tập trung cho thi kì 2  này
     rồi tiếp tục cũng không muộn, lúc đó mình không bị áp lực các thứ đè lên
     
-
-
+    
     từ đây tới lúc thi nè
-    23/5 ôn tập
-    24/5 ôn tập
-    25/5 ôn tập
-    ////trước 25/5 phải ôn xong cho được vật lý/ gt2 và xs
-    * 26/6 ôn tập, đọc kinh tế chính trị
     27/5 làm đề vật lý, 
     28/5 làm đề vật lý
-    29/5 làm đề vật lý, 
-    * 30/5 ôn tập xs, đọc kinh tế chính trị
-    31/5  ôn tập xs, đọc kinh tế chính trị
-    * 1/6 ôn tập xs 
+    29/5 làm đề vật lý,
+    * 30/5 thi vat ly, ôn tập xs, đọc ktct
+    31/5  ôn tập xs, đọc ktct
+    * 1/6 thi ktct, ôn tập xs 
     2/6 làm đề xs, ôn gt2
     3/6 làm đề xs, ôn gt2
     4/6 làm đề xs, ôn gt2
     * 5/6 thi xs
-    6/6
-    7/6
-    * 8/6 thi kĩ thuật lập trình, môn này chưa nghĩ ra chắc là sẽ xem lại rồi mở rộng từ đề của thầy Khánh
+    6/6 làm đề ktlt
+    7/6 làm đề ktlt
+    * 8/6 thi ktlt, xem lại rồi mở rộng từ đề của thầy Khánh
 
 
 
