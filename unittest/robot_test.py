@@ -40,14 +40,13 @@ ngày mai làm gì giờ ta
 
 
     từ đây tới lúc thi nè
-    23/5 ôn tập
     24/5 ôn tập
     25/5 ôn tập
     ////trước 25/5 phải ôn xong cho được vật lý/ gt2 và xs
     * 26/6 ôn tập, đọc kinh tế chính trị
-    27/5 làm đề vật lý, 
-    28/5 làm đề vật lý
-    29/5 làm đề vật lý, 
+    27/5 làm đề vật lý, làm bt kinh tế chính trị
+    28/5 làm đề vật lý, làm bt kinh tế chính trị
+    29/5 làm đề vật lý, làm bt kinh tế chính trị
     * 30/5 ôn tập xs, đọc kinh tế chính trị
     31/5  ôn tập xs, đọc kinh tế chính trị
     * 1/6 ôn tập xs 
@@ -58,8 +57,4 @@ ngày mai làm gì giờ ta
     6/6
     7/6
     * 8/6 thi kĩ thuật lập trình, môn này chưa nghĩ ra chắc là sẽ xem lại rồi mở rộng từ đề của thầy Khánh
-
-
-
-
 """

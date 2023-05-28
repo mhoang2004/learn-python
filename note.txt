@@ -656,10 +656,10 @@ def double(values):
 
         + code need to run before tests: setUp
             * common use cases: adding/ removing data from a test database, creating instances of class
-            te
+
         + code need to run after tests: tearDown
         
-
+ 
     
 
 
