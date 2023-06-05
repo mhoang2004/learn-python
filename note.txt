@@ -701,6 +701,66 @@ def double(values):
             seek(0) #up to head to append
             file.write("Writing files is great\n")
         'r+' - read and write to a file (writing based on cursor and only work on existing file)
+    
+    * Reading CSV file (comma separated values)
+        + CSV module 
+    
+    Ex: from csv import DictReader
+        with open("fighters.csv") as f:
+            csv_DictReader = DictReader(f)
+            for fighter in csv_DictReader:
+                print(fighter)
+
+    * Writing CSV files
+        writer - creates a writer object for writing to CSV 
+
+    Ex: from csv import writer
+        with open("cats.csv", "w") as f:
+            csv_writer = writer(f) #an object
+            csv_writer.writerow(["Name", "Age"])
+            csv_writer.writerow(["Blue", 3])
+            csv_writer.writerow(["Kitty", 1])
+
+    `write` create file and overwritten the content
+
+    * in scope `with` the file will be opened, so we can access the content, but variable in
+    this scope will be able beyond the scope
+
+        Ex: with open("cats.csv", "w") as f:
+                num = 1
+            print(num) #1
+    
+    * writing CSV files: DictWriter 
+    DictWriters - creates a writer object for writing using dictionaries
+    fieldnames - kwarg for the DictWriter specifying headers
+    writeheader - method on a writer to writer header now
+    writerow - method on a writer to write a row based on a dictionary
+
+    DictWriters, fieldnames, writeheader, writerow
+
+    * pickle, JSON (see on file)
+
+===========WEB SCRAPING=======
+    * what is web scraping:
+        + involves programmatically grabbing (get) data from a web page
+        + three step: download, extract data, do whatever we want kakaka
+    
+    * Beautiful Soup
+        + to extract data from HTML, use `beautiful soup`
+        + `beautiful soup` let us negative through HTML with python
+        + `beautiful soup` does not donwload HTML => we need the requests module
+        
+
+lên kế hoạch học tập hằng ngày,
+hôm này làm gì, ngày mai làm gì
+cân bằng giữa việc học và việc chơi,
+làm ra làm học ra học không trộn lẫn
+
+
+    
+
+
+
 
 
 
