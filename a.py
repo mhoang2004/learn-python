@@ -113,3 +113,29 @@ def double(values):
     TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
     """
     return [2 * value for value in values]
+
+
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+        print(self)
+
+
+class Dog(Animal):
+    def __init__(self, name, breed, toy):
+        self.name = name
+        self.species = "Dog"
+        self.breed = breed
+        self.toy = toy
+
+
+class Cat(Animal):
+    def __init__(self, name, breed, toy):
+        super().__init__(name, species="Cat")
+        self.breed = breed
+        self.toy = toy
+
+
+cat = Cat("black", "black cat", "string")
+unknown_animal = Animal("unknown", "unknown")

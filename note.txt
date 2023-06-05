@@ -703,7 +703,6 @@ def double(values):
         'r+' - read and write to a file (writing based on cursor and only work on existing file)
 
 
- 
 
 
 
