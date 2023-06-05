@@ -737,6 +737,26 @@ def double(values):
     writerow - method on a writer to write a row based on a dictionary
 
     DictWriters, fieldnames, writeheader, writerow
+
+    * pickle, JSON (see on file)
+
+===========WEB SCRAPING=======
+    * what is web scraping:
+        + involves programmatically grabbing (get) data from a web page
+        + three step: download, extract data, do whatever we want kakaka
+    
+    * Beautiful Soup
+        + to extract data from HTML, use `beautiful soup`
+        + `beautiful soup` let us negative through HTML with python
+        + `beautiful soup` does not donwload HTML => we need the requests module
+        
+
+lên kế hoạch học tập hằng ngày,
+hôm này làm gì, ngày mai làm gì
+cân bằng giữa việc học và việc chơi,
+làm ra làm học ra học không trộn lẫn
+
+
     
 
 

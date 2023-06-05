@@ -84,6 +84,8 @@ việc gì mình cần làm tốt bây giờ nhỉ
     mình sợ là sau này mình chỉ mong tới cuối tuần rồi đi về trong mệt mỏi
     cả ngày phải code (sợ không?) không sợ lắm
     code là việc mình khá giỏi nên cx không lo lắm
+    nay mình làm sao vậy Hoàng, nhìn đi đâu vậy?
+    
     
 
 """
