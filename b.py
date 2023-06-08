@@ -1,3 +1,5 @@
-import requests
-from bs4 import BeautifulSoup
-import csv
+import calendar
+
+yy = 2004
+mm = 2
+print(calendar.month(yy, mm))
