@@ -12,15 +12,13 @@ from random import choice
 #     next_url = soup.find(attrs={"class": "next"})
 #     if not next_url:
 #         break
-    
+
 #     respone = requests.get(url + next_url.a["href"])
 #     soup = BeautifulSoup(respone.text, "html.parser")
 
-#     quotes.extend(soup.select(".quote"))    
+#     quotes.extend(soup.select(".quote"))
 
 # objs = []
-
-
 
 
 # for quote in quotes:
@@ -55,7 +53,7 @@ with open("quotes.json") as file:
     data = json.loads(content)
 
 play_again = "y"
-while(play_again == "y"):
+while (play_again == "y"):
     the_choosen = choice(data)
     guess_num = 4
 
@@ -63,44 +61,29 @@ while(play_again == "y"):
         if num == 3:
             print("Here's a hint: The author was " + the_choosen["authorInfo"])
         elif num == 2:
-            print(f"Here's a hint: The author's first name starts with {the_choosen['author'][0]}")
+            print(
+                f"Here's a hint: The author's first name starts with {the_choosen['author'][0]}")
         elif num == 1:
             print(f"No hint kakaka")
-
-
-
 
     print("Here's a quote: \n\n")
     print(the_choosen["text"])
 
-    while(guess_num):
-        user_input = input(f"\n\nWho said this? Guesses remaining: {guess_num}. ")
-        
-        if user_input == the_choosen["author"]:
+    while (guess_num):
+        user_input = input(
+            f"\n\nWho said this? Guesses remaining: {guess_num}. ")
+
+        if user_input.lower() == the_choosen["author"].lower():
             print("You guessed correctly! Congratulations!")
             break
         else:
             guess_num -= 1
             hint(guess_num)
-    
+
     if guess_num == 0:
-        print(f"Sorry, you've run out of guesses. The answer was `{the_choosen['author']}`")
+        print(
+            f"Sorry, you've run out of guesses. The answer was `{the_choosen['author']}`")
 
     play_again = input("Would you like to play again (y/n) ? ")
     if play_again != "y":
         print("OK! See you next time!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
